@@ -8,7 +8,7 @@ $\text{Slideto}\TeX$ is a tool that converts PDF presentations to $\LaTeX$ code 
 
 ## Features
 
-- 🧠 Utilization of GPT-4o for accurate image-to-$\LaTeX$ conversion and **custom reformating**
+- 🧠 Utilization of GPT-4o for accurate $\text{image-to-}\LaTeX$ conversion and **custom reformating**
 - 🌐 Web interface to visualize and manage converted PDFs
 - 💰 Price per page is competitive with services like mathpix (my solution is actually better because it includes automatic and adapted reformating)
 - 💡 Intelligent detection of incremental slides to reduce API costs
@@ -56,19 +56,19 @@ The main parameters are located in `src/config.py`:
 Simple conversion of a PDF to $\LaTeX$:
 
 ```bash
-python -m src.$\text{Slideto}\TeX$ path/to/your/slides.pdf
+python -m src.slidetotex path/to/your/slides.pdf
 ```
 
 With incremental slide detection (cost saving):
 
 ```bash
-python -m src.$\text{Slideto}\TeX$ path/to/your/slides.pdf --extract-relevant-slides
+python -m src.slidetotex path/to/your/slides.pdf --extract-relevant-slides
 ```
 
 Using a custom prompt:
 
 ```bash
-python -m src.$\text{Slideto}\TeX$ path/to/your/slides.pdf --prompt path/to/custom_prompt.txt
+python -m src.slidetotex path/to/your/slides.pdf --prompt path/to/custom_prompt.txt
 ```
 
 ### Web Interface
