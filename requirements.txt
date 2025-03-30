@@ -1,0 +1,12 @@
+numpy
+Pillow
+pdf2image
+scikit-image
+imagehash
+opencv-python
+Flask
+tqdm
+langchain-core
+langchain-openai
+langchain-community
+plyer

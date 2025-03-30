@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+    <title>Slide2Tex - Home</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Slides2TeX</h1>
+        
+        <div class="view-toggle">
+            <button id="grid-view-btn" class="active"><i class="fas fa-th"></i></button>
+            <button id="list-view-btn"><i class="fas fa-list"></i></button>
+        </div>
+        
+        <div id="preview-container" class="preview-grid">
+        {% for root, preview_path in previews %}
+            <div class="preview-item">
+                <h3><a href="{{ url_for('view_pdf', folder=root) }}">{{ root.split('\\')[-1].split('/')[-1] }}</a></h3>
+                <img src="{{ url_for('download_pdf', folder=root, filename='preview.jpg') }}">
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

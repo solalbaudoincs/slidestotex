@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %}Erreur{% endblock %}
+
+{% block content %}
+<div class="error-container">
+    <h1>Erreur</h1>
+    <p>Impossible de trouver les données LaTeX pour le dossier <strong>{{ folder }}</strong>.</p>
+    <p><a href="{{ url_for('home') }}">Retour à l'accueil</a></p>
+</div>
+{% endblock %}

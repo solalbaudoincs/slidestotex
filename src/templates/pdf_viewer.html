@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}Slides2TeX - {{ folder.split('\\')[-1].split('/')[-1] }}{% endblock %}
+
+{% block content %}
+<h1>{{ folder.split('\\')[-1].split('/')[-1] }}, conversion cost: {{cost}}$</h1>
+
+<!-- Dark mode toggle button -->
+<button class="dark-mode-toggle" id="darkModeToggle">Dark Mode</button>
+
+<!-- Main container with split panels -->
+<div class="container">
+    <!-- Left panel for PDF pages -->
+    <div class="left-panel">
+        {% for p in pages %}
+        <img class="pdf-page" data-index="{{ loop.index0 }}"
+            src="{{ url_for('download_pdf', folder=folder, filename=p) }}"
+            style="width:100%;">
+        {% endfor %}
+    </div>
+    <!-- Right panel for LaTeX content -->
+    <div class="right-panel">
+        {% for content in latex_content %}
+        <div class="latex-section" id="latex-{{ loop.index0 }}" style="padding: 2vw;">
+            <h2>LaTeX Code</h2>
+            <div class='code-container' style="white-space: pre-line; border-radius: 15px;">
+                <div style="margin: 1vw;">
+                    <code style="font-family: monospace;">{{ content.content }}</code>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/pdf_viewer.js') }}"></script>
+{% endblock %}

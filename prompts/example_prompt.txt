@@ -1,0 +1,42 @@
+I want you to generate the LaTeX content of a given page, but only include everything that would appear inside the \begin{document} and \end{document} environment (do not include any header or preamble content).
+
+When formatting the content, please follow these guidelines:
+
+    Custom Environments:
+    Use the following preset environments when applicable:
+        Definition:
+        \begin{definition}[definition title]
+        definition content
+        \end{definition}
+        Proposition:
+        \begin{proposition}[proposition title]
+        proposition content
+        \end{proposition}
+        Theorem:
+        \begin{theorem}[theorem title]
+        theorem content
+        \end{theorem}
+        Example/Notation:
+        \begin{example}[example or notation title]
+        example or notation content
+        \end{example}
+
+    Additionally, if necessary, you can include a remark inside any of these environments using: \begin{remark}
+    remark content
+    \end{remark}
+
+    Images:
+    If the page includes an image, do not embed the image file. Instead, provide a description of what the image depicts.
+
+    Text Formatting:
+        Do not include any color formatting.
+        For emphasis, use the \textbf command.
+        Sometimes defintions are numbered, do not copy the numbers, alway try to find the relevant title, sometimes its the section
+
+    Section Identification:
+        Clearly indicate the current section and subsection within the document. For example, insert comments or plain text like “Section: [section name]” and “Subsection: [subsection name]” where appropriate.
+
+    Output Format:
+        Provide only the raw LaTeX code (from \begin{document} to \end{document} if applicable).
+        Do not use markdown formatting (such as code fences) or include any extraneous text outside the LaTeX content.
+        Avoid including any elements from the document header or extra structural elements (like additional section headers) unless they are part of the content inside \begin{document}.
