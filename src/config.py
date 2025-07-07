@@ -12,3 +12,4 @@ API_KEY = "insert_your_api_key_here"
 
 MODEL_NAME = "gpt-4o" # use chatgpt api model name convention
 CONVERTED_PDFS_DIR = "./converted_pdfs"
+DEFAULT_PROMPT_PATH = "./prompts/example_prompt.txt"
