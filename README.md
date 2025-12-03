@@ -107,7 +107,7 @@ To get the most out of this system, consider the following tips:
 
 The algorithm uses a comparison based on SSIM (Structural Similarity Index) and difference analysis to determine if a slide is an incremental version of a previous one. This saves on API costs by only processing slides with complete content.
 
-For more details on detection methods, see [`src/experiments.md`](../experiments/readme.md).
+For more details on detection methods, see [`experiments/readme.md`](/experiments/readme.md).
 
 ## TODO
 
